@@ -1,0 +1,72 @@
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from twilio.rest import Client
+import random
+
+# Function to generate OTP
+def generate_otp():
+    return str(random.randint(1000, 9999))
+
+# Function to send OTP via SMS
+def send_otp_sms(to, otp):
+    # Twilio credentials
+    account_sid = 'YOUR_TWILIO_ACCOUNT_SID'
+    auth_token = 'YOUR_TWILIO_AUTH_TOKEN'
+    from_number = 'YOUR_TWILIO_PHONE_NUMBER'
+
+    # Initialize Twilio client
+    client = Client(account_sid, auth_token)
+
+    # Send SMS
+    message = client.messages.create(
+        body=f'Your OTP is: {otp}',
+        from_=from_number,
+        to=to
+    )
+
+# Function to send OTP via email
+def send_otp_email(to, otp):
+    # SMTP server credentials
+    smtp_server = 'YOUR_SMTP_SERVER'
+    smtp_port = 587
+    smtp_username = 'YOUR_SMTP_USERNAME'
+    smtp_password = 'YOUR_SMTP_PASSWORD'
+
+    # Email details
+    sender_email = 'YOUR_SENDER_EMAIL'
+    subject = 'OTP Verification'
+    message = f'Your OTP is: {otp}'
+
+    # Set up the email
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = to
+    msg['Subject'] = subject
+    msg.attach(MIMEText(message, 'plain'))
+
+    # Send email
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_username, smtp_password)
+        server.sendmail(sender_email, to, msg.as_string())
+
+# Main function
+def main():
+    # Replace with the recipient's phone number and email address
+    recipient_phone = 'RECIPIENT_PHONE_NUMBER'
+    recipient_email = 'RECIPIENT_EMAIL_ADDRESS'
+
+    # Generate OTP
+    otp = generate_otp()
+
+    # Send OTP via SMS
+    send_otp_sms(recipient_phone, otp)
+
+    # Send OTP via email
+    send_otp_email(recipient_email, otp)
+
+    print("OTP sent successfully!")
+
+if __name__ == "__main__":
+    main()
