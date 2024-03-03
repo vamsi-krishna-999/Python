@@ -1,0 +1,72 @@
+File Management:
+=================
+
+Ctrl + N: New File
+Ctrl + O: Open File
+Ctrl + S: Save File
+Ctrl + Shift + S: Save As
+Ctrl + W: Close Editor
+Ctrl + F4: Close Window
+
+
+Editing:
+============
+
+Ctrl + X: Cut Line (empty selection)
+Ctrl + C: Copy Line (empty selection)
+Ctrl + Shift + K: Delete Line
+Ctrl + Enter: Insert Line Below
+Ctrl + Shift + Enter: Insert Line Above
+**Ctrl + Shift + **: Jump to Matching Bracket
+Ctrl + /: Toggle Line Comment
+Alt + ↑/↓: Move Line Up/Down
+Shift + Alt + ↑/↓: Copy Line Up/Down
+Ctrl + D: Add Selection To Next Find Match  ( custom selection based on common content )
+Ctrl + U: Undo Last Cursor Operation
+Ctrl + Shift + L: Select All Occurrences of Find Match
+Ctrl + Space: Trigger Suggestion
+Ctrl + Shift + Space: Trigger Parameter Hints
+
+
+Navigation:
+============
+Ctrl + P: Quick Open File
+Ctrl + Tab: Open Next Editor
+Ctrl + Shift + Tab: Open Previous Editor
+Ctrl + Shift + E: Show Explorer
+Ctrl + Shift + F: Show Search
+Ctrl + Shift + G: Show Source Control
+Ctrl + Shift + D: Show Debug
+Ctrl + Shift + X: Show Extensions
+Ctrl + G: Go to Line
+Ctrl + F: Find
+Ctrl + H: Replace
+Ctrl + Shift + M: Show Problems (Errors, Warnings, etc.)
+Ctrl + Shift + O: Go to Symbol (method, function, etc.)
+
+
+View:
+======
+Ctrl + B: Toggle Sidebar Visibility
+Ctrl + `: Toggle Integrated Terminal Visibility
+Ctrl + Shift + V: Toggle Markdown Preview
+Ctrl + K Ctrl + S: Show Keyboard Shortcuts
+Ctrl + K Z: Zen Mode (Full Screen)
+
+
+Debugging:
+============
+F5: Start Debugging
+F9: Toggle Breakpoint
+F10: Step Over
+F11: Step Into
+Shift + F11: Step Out
+Ctrl + Shift + F5: Restart Debugging
+Ctrl + Shift + F9: Remove All Breakpoints
+
+
+Terminal:
+============
+Ctrl + `: Show/Hide Terminal
+Ctrl + Shift + `: Create New Terminal
+Ctrl + Shift + C: Copy Selection
