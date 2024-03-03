@@ -1,0 +1,34 @@
+from cryptography.fernet import Fernet
+
+def generate_key():
+    """
+    Generate a Fernet key.
+    """
+    return Fernet.generate_key()
+
+def create_cipher_suite(key):
+    """
+    Create a Fernet cipher suite with the given key.
+    """
+    return Fernet(key)
+
+def encrypt_data(cipher_suite, data):
+    """
+    Encrypt data using the provided Fernet cipher suite.
+    """
+    return cipher_suite.encrypt(data)
+
+def decrypt_data(cipher_suite, encrypted_data):
+    """
+    Decrypt encrypted data using the provided Fernet cipher suite.
+    """
+    return cipher_suite.decrypt(encrypted_data).decode()
+
+# Usage
+key = generate_key()
+cipher_suite = create_cipher_suite(key)
+data_to_encrypt = b"Hello, this is a secret message!"
+encrypted_data = encrypt_data(cipher_suite, data_to_encrypt)
+print("Encrypted data:", encrypted_data)
+decrypted_data = decrypt_data(cipher_suite, encrypted_data)
+print("Decrypted data:", decrypted_data)

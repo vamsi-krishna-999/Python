@@ -1,0 +1,36 @@
+AES (Advanced Encryption Standard) is a symmetric encryption algorithm, 
+meaning the same key is used for both encryption and decryption. AES is 
+widely used and considered one of the most secure encryption algorithms 
+available today. The "256-bit" part refers to the key size, which determines 
+the complexity of the encryption. In AES-256, the key size is 256 bits.
+
+
+How AES works:
+==============
+Key Expansion: 
+--------------     
+The original key undergoes a key expansion algorithm 
+to generate a series of round keys, which are used in 
+the subsequent encryption and decryption rounds.
+
+Initial Round: 
+--------------
+The plaintext is XORed with the first round key.
+
+
+Rounds: 
+-------
+AES operates through a series of rounds (10, 12, or 14 rounds 
+depending on the key size - 128, 192, or 256 bits respectively). 
+Each round consists of several transformations such as 
+substitution, permutation, and mixing of the data.
+
+Final Round: 
+------------
+
+The final round is slightly different from the previous ones, 
+it lacks the "MixColumns" transformation step.
+
+Output: 
+--------
+The result after the final round is the ciphertext (encrypted data).
