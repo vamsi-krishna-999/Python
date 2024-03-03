@@ -1,0 +1,39 @@
+Django Project Structure:
+A Django project typically consists of multiple apps, each serving a specific functionality within the project. Here's the general structure of a Django project:
+
+project_name/
+│
+├── project_name/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── app1/
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+│
+├── app2/
+│   ├── ...
+│
+└── manage.py
+project_name/: The root directory of your Django project.
+
+project_name/: This inner directory is the Python package for your project.
+__init__.py: An empty file that tells Python that this directory should be considered a Python package.
+
+settings.py: Configuration settings for your Django project, including database configuration, static files, middleware, etc.
+
+urls.py: URL declarations for the entire project, mapping URLs to views.
+
+wsgi.py: WSGI (Web Server Gateway Interface) entry-point for production deployment.
+
+app1/, app2/, ...: Individual Django apps within the project.
+Each app follows its own structure, which includes files like models.py, views.py, urls.py, etc.
+
+manage.py: A command-line utility for interacting with your Django project. It allows you to run development server, create database migrations, run tests, etc.

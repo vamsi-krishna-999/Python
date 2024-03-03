@@ -1,0 +1,21 @@
+ModuleNotFoundError: This error occurs when Django cannot find a module or package that your project depends on. It usually indicates an issue with your Python environment or dependencies.
+
+ImproperlyConfigured: This exception is raised when Django encounters a configuration error in your settings file (settings.py). Common causes include missing required settings or incorrect configurations.
+
+DatabaseError: This error occurs when there's a problem with the database connection or query execution. It can be caused by issues such as incorrect database credentials, database server downtime, or SQL syntax errors.
+
+ValidationError: This exception is raised when data validation fails. It often occurs when submitting forms with invalid data or when saving model instances that violate model constraints or field validations.
+
+PermissionDenied: This exception is raised when a user tries to access a resource or perform an action for which they don't have the necessary permissions. It's commonly used in Django views to handle authorization errors.
+
+PageNotAnInteger, EmptyPage: These exceptions are related to pagination and occur when navigating to pages that don't exist or when the requested page number is not an integer.
+
+DoesNotExist: This exception is raised when querying for a model instance that doesn't exist in the database. It's commonly handled in Django views to provide appropriate error messages or redirect users to error pages.
+
+FieldError: This exception occurs when there's a problem with model field lookups or queries. It can be caused by using incorrect field names, invalid query expressions, or unsupported operations.
+
+SuspiciousOperation: This exception is raised when Django detects potentially unsafe or suspicious operations, such as HTTP request forgery attempts or unexpected session modifications.
+
+TemplateDoesNotExist: This error occurs when Django cannot find the specified template file. It's commonly caused by incorrect template paths or missing template files.
+
+ViewDoesNotExist: This exception is raised when Django cannot find the specified view function or class-based view. It's typically caused by incorrect URL configurations or missing view definitions.

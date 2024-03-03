@@ -1,0 +1,21 @@
+To create a superuser in Django, you can use the createsuperuser management command. This command allows you to create a user with administrative privileges, which means they will have access to the Django admin interface and can perform administrative tasks such as managing users, groups, permissions, and other aspects of the application.
+
+Here's how to create a superuser:
+
+Ensure your Django project is set up and running.
+Open a terminal or command prompt.
+Navigate to the directory of your Django project.
+Activate your virtual environment (if you're using one).
+
+>>> python manage.py createsuperuser
+
+
+and run the server using below command:
+
+>>> python manage.py runserver
+
+
+then use the generated localhost link 
+
+127.0.0.1:8000/admin/    (  use /admin/  at end of the link )
+

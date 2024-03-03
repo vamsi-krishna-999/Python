@@ -1,0 +1,94 @@
+
+
+Creating a virtual environment in Django allows you to isolate your Python environment and dependencies for each project.
+This helps manage dependencies and prevents conflicts between different projects. 
+
+
+Step (01): 
+-----------------------------------------------------------------
+
+Install Virtualenv (if not already installed):
+
+>>> pip install virtualenv
+
+
+Navigate to your project directory:
+Open a terminal and navigate to the directory where 
+you want to create your Django project.
+
+
+
+Step (02): 
+-----------------------------------------------------------------
+
+Create a virtual environment:
+
+Run the following command to create a virtual environment named env:       
+
+>>> virtualenv env_name
+
+Replace env with your preferred name for the virtual environment.
+
+
+
+
+Step (03): 
+-----------------------------------------------------------------
+
+Activate the virtual environment:
+
+On Windows:
+
+env\Scripts\activate
+
+
+On macOS/Linux:
+
+source env/bin/activate
+
+
+
+Step (04): 
+-----------------------------------------------------------------
+
+Install Django:
+
+While in the virtual environment, you can install Django using pip:
+
+
+>>> pip install django    (  try to download this version   3.2.5  )
+
+
+Th is will install the latest version of Django within your virtual environment.
+
+
+Step (05): 
+-----------------------------------------------------------------
+
+
+Create a Django project:
+
+Once Django is installed, you can create a new Django project using the django-admin command:
+
+
+>>> django-admin startproject myproject
+
+Replace myproject with the name you want to give to your Django project.
+
+Navigate into the project directory:
+
+
+>>> cd myproject
+ 
+
+Replace myproject with the name of your Django project.
+
+(Optional) Install additional dependencies:
+
+If your project requires additional Python packages, you can install them using pip while your virtual environment is activated.
+
+Deactivate the virtual environment (when you're done working on your project):
+
+>>> deactivate
+
+This will return you to your system's global Python environment
